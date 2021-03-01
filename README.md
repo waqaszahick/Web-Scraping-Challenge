@@ -1,7 +1,7 @@
 # Web-Scraping-Challenge
 Assignment # 11: Web Scraping
 
-This is my over all 11th, and fir 'web scraping' assignment. In this assignment, I was required to build a web application that scrapes various websites for data related to the "Mission to Mars" and to display the information in a single HTML page. It was a 2-step assignment and I performed the following tasks to complete it:
+This is my over all 11th, and first 'web scraping' assignment. In this assignment, I was required to build a web application that scrapes various websites for data related to the "Mission to Mars" and to display the information in a single HTML page. It was a 2-step assignment and I performed the following tasks to complete it:
 
 Step 1: Scraping
 
