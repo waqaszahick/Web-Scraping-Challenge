@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Data</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/journal/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+      $(document).ready(function(){   
+      document.getElementById("content").innerHTML='<object type="text/html" data="data_table.html"></object>'; 
+      });
+  </script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data!</a></p>
+    </div>
+    <h2>Latest Mars News</h2>
+    <h3>{{vacation.news_title}}</h3>
+    <p>{{vacation.news_p}}</p>
+    <div class="row">
+    <div class="col-lg-6 col-md-12 col-sm-12">
+      <h1>Featured Mars Image</h1>
+      <img src="{{vacation.featured_img}}" width = "100%"/>
+    </div>
+    <div class="col-lg-3 col-md-12 col-sm-12">
+      <h1>Mars Facts</h1>
+      {{vacation.table|safe}} <!--To get the "Mars Facts" table displayed></!-->
+      <div id="content"></div>
+    </div>
+    </div>
+  </div>
+  <h1 style="text-align:center;">Mars Hemispheres</h1>
+  <div class='row'>
+    <div class="col-lg-6 col-md-12 col-sm-12">
+      <img src="{{vacation.hemispheres[0].img_url}}" style="margin-left:10%;" width = "80%"/>
+      <h2 style="text-align:center;">{{vacation.hemispheres[0].title}}</h2>
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12">
+      <img src="{{vacation.hemispheres[1].img_url}}" style="margin-right:10%;" width = "80%"/>
+      <h2 style="text-align:center;">{{vacation.hemispheres[1].title}}</h2>
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12">
+      <img src="{{vacation.hemispheres[2].img_url}}" style="margin-left:10%;" width = "80%"/>
+      <h2 style="text-align:center;">{{vacation.hemispheres[2].title}}</h2>
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12">
+      <img src="{{vacation.hemispheres[3].img_url}}" style="margin-right:10%;" width = "80%"/>
+      <h2 style="text-align:center;">{{vacation.hemispheres[3].title}}</h2>
+    </div>
+  </div>  
+  </div>
+ 
+</body>
+</html>
